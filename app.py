@@ -3,6 +3,17 @@ from resume_parser import extract_text_from_pdf, extract_keywords, match_keyword
 
 st.set_page_config(page_title="Smart Resume Analyzer", layout="wide")
 
+import spacy
+import os
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    # Download if not found
+    from spacy.cli import download
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 # Custom CSS for Beautiful UI
 st.markdown("""
     <style>
