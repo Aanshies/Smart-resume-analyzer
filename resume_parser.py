@@ -21,7 +21,6 @@ def extract_keywords(text):
     doc = nlp(text)
     return list(set([token.text.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and not token.is_stop]))
 
-from fuzzywuzzy import fuzz
 
 def match_keywords(resume_keywords, jd_keywords):
     matched_keywords = []
