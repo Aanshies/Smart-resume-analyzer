@@ -8,18 +8,22 @@ from fuzzywuzzy import fuzz
 nlp = spacy.load("en_core_web_sm")
 
 def extract_text_from_pdf(file):
-    """Extract full text from a PDF file object"""
-    doc = fitz.open(stream=file.read(), filetype="pdf")
-    text = ""
-    for page in doc:
-        text += page.get_text()
-    doc.close()
-    return text
+    try:
+        doc = fitz.open(stream=file.read(), filetype="pdf")
+        text = ""
+        for page in doc:
+            text += page.get_text()
+        doc.close()
+        return text
+    except Exception as e:
+        return ""
+
 
 def extract_keywords(text):
     """Get important keywords from the text using spaCy"""
     doc = nlp(text)
-    return list(set([token.text.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and not token.is_stop]))
+    return list(set([token.lemma_.lower() for token in doc if token.pos_ in ["NOUN", "PROPN"] and not token.is_stop]
+))
 
 
 def match_keywords(resume_keywords, jd_keywords):
