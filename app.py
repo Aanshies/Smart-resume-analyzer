@@ -86,3 +86,8 @@ if st.button("🚀 Run Analysis"):
         st.error("⚠️ Please upload both resume and job description.")
 
 st.markdown("</div>", unsafe_allow_html=True)
+
+
+if __name__ == "__main__":
+    import os
+    os.system("streamlit run aop.py")
