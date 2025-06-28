@@ -93,7 +93,7 @@ streamlit run app.py
 - Deploy on Streamlit Community Cloud or your server for accessible online resume screening.
 
 ### 🌐 Hosted Demo: [Smart Resume Analyzer
-[🌟 Launch Smart Resume Analyzer on Streamlit](http://192.168.179.248:8501/#smart-resume-analyzer)
+[🌟 Launch Smart Resume Analyzer on Streamlit]((https://smart-resume-analyzer-gfasvzsc8zorpqpjburbhc.streamlit.app/))
 
 ### 🤝 Contributing
 - Contributions are welcome! 🚀
