@@ -18,8 +18,7 @@ st.set_page_config(page_title="Smart Resume Analyzer", layout="wide")
 st.markdown("""
     <style>
     body { background-color: #f7f9fb; }
-    .main { background-color: #ffffff; padding: 2rem; border-radius: 1rem;
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.05); margin: auto; width: 90%; }
+   
     .stButton > button { background-color: #4CAF50 !important; color: white;
                          border-radius: 8px; padding: 0.5rem 1.5rem; font-weight: bold; }
     .stProgress > div > div > div { background-color: #4CAF50 !important; }
