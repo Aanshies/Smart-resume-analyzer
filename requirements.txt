@@ -1,8 +1,11 @@
 streamlit
 PyMuPDF
 spacy
-scikit-learn
-PyPDF2
 fuzzywuzzy
 python-Levenshtein
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+pip>=24.0
+setuptools>=70.0
+wheel>=0.43
+PyPDF2==3.0.1
+scikit-learn==1.4.2
